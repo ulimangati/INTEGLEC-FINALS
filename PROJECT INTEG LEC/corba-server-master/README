@@ -1,0 +1,23 @@
+FIRST START CORBA ON PORT 1050
+--------------------------------------------
+orbd -ORBInitialPort 1050
+
+
+FOR Server
+--------------------------------------------
+idlj -fall mainfiles.idl
+javac -cp . mainfiles/*.java
+javac -cp . corbaserver/Launcher.java
+
+cd [PROJECT FOLDER]/src/main/java
+java corbaserver.Launcher -ORBInitialPort 1050 -ORBInitialHost localhost& /home/mehdi/words.txt
+
+
+FOR Client
+--------------------------------------------
+idlj -fall mainfiles.idl
+javac -cp . mainfiles/*.java
+javac -cp . corbaclient/HangmanClient.java
+
+cd [PROJECT FOLDER]/src/main/java
+java corbaclient.HangmanClient -ORBInitialPort 1050 -ORBInitialHost 192.168.254.101
