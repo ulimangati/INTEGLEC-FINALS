@@ -1,0 +1,20 @@
+Mark, Louie, Steven, Joemel
+Server java 
+-Idl Interface
+-Server
+-idl implementatin
+-method implementation
+-main orbd
+
+Josh,Ungson,Gianne,Grant,Cayadi
+Client Java
+-implementation of the interface
+-Implementation to the method
+-client connection to the server
+-GUI of the gane
+
+Perez, Bernardo,Krypton,Domingcil, Emrick
+Non-java client
+-connection to Corba server
+-console of the game
+-methods from the corba server
