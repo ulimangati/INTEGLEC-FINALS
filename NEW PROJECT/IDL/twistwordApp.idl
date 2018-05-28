@@ -1,0 +1,11 @@
+module twistwordApp {
+   interface twistword {
+    boolean isAnswerCorrect();
+    boolean isGameOver();
+    boolean isLetterInString(in char letter, in string str);
+    boolean isLongestWord(in string str);
+    string jumbleString(in string str);
+    string getQuestion();
+
+   };
+};
