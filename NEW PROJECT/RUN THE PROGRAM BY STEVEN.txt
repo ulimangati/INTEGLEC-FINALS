@@ -1,0 +1,27 @@
+// @Author Steven Mangati
+
+1.Convert the file twistwordApp.idl into the java file equivalent thru the command line using idlj.  Note: make sure that the bin folder of the Java Development Kit (JDK) is added in the system environment variable (path). 
+
+2.Server side 
+i. Make the Server folder as the current directory of the command prompt 
+ii. Issue the command idlj –fall ..\idl\IDL\twistwordApp.idl 
+iii. This creates a package (folder) twistwordApp within the Server folder 
+
+3.Client side 
+i. Make the Client folder as the current directory of the command prompt 
+ii. Issue the command idlj –fclient ..\IDL\twistwordApp.idl 
+iii. This creates a package (folder) twistwordApp within the Client folder 
+
+4.Run the Server program. 
+a. Run these commands in the Server directory 
+i. javac twistwordImpl.java  (Note: a warning will appear when this is issued but just ignore it) ii. javac twistwordServer.java 
+b. Activate the orb daemon using the command below (port 2000 can be replaced with another value) 
+i. start orbd –ORBInitialPort 2000 
+c. Activate the server programs 
+i. start java twistwordServer –ORBInitialPort 2000 
+
+5.Run the Client program. 
+a. Run these commands in the Client directory 
+i. javac twistwordClient.java 
+ii. java twistwordClient –ORBInitialPort 2000 
+ENJOY THE GAME B!
